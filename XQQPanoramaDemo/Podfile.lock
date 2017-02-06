@@ -1,0 +1,17 @@
+PODS:
+  - BaiduMapKit (3.2)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+
+DEPENDENCIES:
+  - BaiduMapKit
+  - FMDB
+
+SPEC CHECKSUMS:
+  BaiduMapKit: c23aee47be89b2b939a92acfd06627114e897662
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+
+PODFILE CHECKSUM: 98ec9d87c690faaacf2647ff6fabd70590a93b40
+
+COCOAPODS: 1.2.0.beta.1

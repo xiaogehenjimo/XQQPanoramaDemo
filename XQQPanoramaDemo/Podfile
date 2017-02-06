@@ -1,0 +1,5 @@
+platform :ios, '8.0'
+pod 'BaiduMapKit'
+pod 'FMDB'
+target 'XQQPanoramaDemo' do
+end

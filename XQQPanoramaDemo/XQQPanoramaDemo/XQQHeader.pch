@@ -1,0 +1,61 @@
+//
+//  XQQHeader.pch
+//  XQQPanoramaDemo
+//
+//  Created by XQQ on 2017/1/11.
+//  Copyright © 2017年 UIP. All rights reserved.
+//
+
+#ifndef XQQHeader_pch
+#define XQQHeader_pch
+
+#ifdef __OBJC__
+
+/**将数据写到桌面plist*/
+#define XQQWriteToPlist(data,fileName) [data writeToFile:[NSString stringWithFormat:@"/Users/gl/Desktop/%@.plist",fileName] atomically:YES];
+
+/*日志相关*/
+#ifdef DEBUG
+#define XQQLog(...)  NSLog(__VA_ARGS__)
+#else
+#define XQQLog(...)
+#endif
+
+#define XQQLogFunc XQQLog(@"%s", __func__);
+
+/*颜色相关*/
+#define XQQColorAlpa(r,g,b,a)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define XQQColor(r,g,b)         XQQColorAlpa((r),(g),(b),255)
+#define XQQRandomColor          XQQColor(arc4random_uniform(255),arc4random_uniform(255),arc4random_uniform(255))
+#define XQQSingleColor(r)  XQQColor((r),(r),(r))
+
+/*屏幕尺寸*/
+#define iphoneWidth  [UIScreen mainScreen].bounds.size.width
+#define iphoneHeight [UIScreen mainScreen].bounds.size.height
+
+#define kDocumentsPath                      [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0]
+/*图片名字*/
+#define XQQImageName(name)  [UIImage imageNamed:(name)]
+
+
+//存储字段名
+#define search_name @"searchName"
+#define search_type @"searchType"
+#define search_time @"searchTime"
+//时间格式
+#define xqq_timeFormat @"yyyy-MM-dd HH:mm:ss"
+
+
+
+
+#import "XQQBaiduTool.h"
+#import "UIView+XQQAdd.h"
+#import "XQQDataManager.h"
+
+
+
+
+
+#endif
+
+#endif /* XQQHeader_pch */
